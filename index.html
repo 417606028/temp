@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<audio src="music/10.mp3"  ></audio>
+	<div class="aa" style="width: 30px;height: 30px;background: #ccc;"></div>
+</body>
+</html>
+<script>
+	window.onload=function(){
+		var audio=document.querySelector('audio');
+		var aa=document.querySelector('.aa');
+		console.log(audio);
+		aa.onclick=function(){
+			audio.play();
+		}
+		audio.onTimeUpdate=function(){
+			console.log(audio.currentTime);
+		}
+
+	}
+</script>
